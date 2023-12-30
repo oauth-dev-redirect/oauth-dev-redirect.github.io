@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oauth redirect</title>
+</head>
+<body>
+<div style="margin: 20px 400px;">
+<a id="link">redirect</a>
+</div>
+<script>
+var url = location.hash.length > 1 ? location.hash.substring(1) : null;
+if(url) {
+document.getElementById("link").href = url
+document.getElementById("link").innerText = url
+} else {
+document.getElementById("link").innerText = 'No redirect URL'
+}
+</script>
+</body>
+</html>
